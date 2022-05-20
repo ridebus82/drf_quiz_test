@@ -10,6 +10,10 @@ WORKDIR /home/drf_quiz_test/
 
 RUN pip install -r requirements.txt
 
+RUN pip install gunicorn
+
+RUN pip install mysqlclient
+
 RUN echo "django-insecure-@7167t@w1up1$^!xg3@!valf_&13=+f35p00fft!8ybb0#=nla" > .env
 
 RUN python manage.py collectstatic

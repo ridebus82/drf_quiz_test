@@ -10,7 +10,7 @@ services:
       - media-volume:/data/media
     ports:
       - 80:80
-  djang_flutter_test:
+  django_flutter_test:
     image: django_flutter_quiztest:1
     networks:
       - network
