@@ -77,9 +77,13 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 venv/
-.env
+
 db.sqlite3
 .idea/
 __pycache__/
+
 Dockerfile
+
 docker-compose.yml
+
+.env

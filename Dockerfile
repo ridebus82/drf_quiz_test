@@ -2,7 +2,7 @@ FROM python:3.9.0
 
 WORKDIR /home/
 
-RUN echo "g45g45g45g4g5"
+RUN echo "67j67j67n6n67n"
 
 RUN git clone https://github.com/ridebus82/drf_quiz_test.git
 
