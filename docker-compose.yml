@@ -1,0 +1,38 @@
+version: "3.7"
+services:
+  nginx:
+    image: nginx:1.19.5
+    networks:
+      - network
+    volumes:
+      - /home/django_flutter_test/nginx.conf:/etc/nginx/nginx.conf
+      - static-volume:/data/static
+      - media-volume:/data/media
+    ports:
+      - 80:80
+  djang_flutter_test:
+    image: django_flutter_quiztest:1
+    networks:
+      - network
+    volumes:
+      - static-volume:/home/drf_quiz_test/staticfiles
+      - media-volume:/home/drf_quiz_test/media
+  mariadb:
+    image: mariadb:10.5
+    networks:
+      - network
+    volumes:
+      - mariadb-database:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: auiz_app_model
+      MYSQL_USER: pcyadmin
+      MYSQL_ROOT_PASSWORD: rkwkrh13!#
+      MYSQL_PASSWORD: rkwkrh13!#
+
+networks:
+  network:
+
+volumes:
+  static-volume:
+  media-volume:
+  mariadb-database:
